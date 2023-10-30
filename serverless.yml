@@ -1,10 +1,10 @@
-service: my-store-app
+service: shop-react-reduc-cloudfront
 
 frameworkVersion: "3"
 
 provider:
   name: aws
-  runtime: nodejs14.x
+  runtime: nodejs16.x
   region: eu-west-1
   # setup profile for AWS CLI.
   # profile: node-aws
@@ -19,12 +19,12 @@ plugins:
 
 custom:
   client:
-    bucketName: my-store-app
+    bucketName: shop-react-reduc-cloudfront
     distributionFolder: dist
   s3BucketName: ${self:custom.client.bucketName}
 
   ## Serverless-single-page-app-plugin configuration:
-  s3LocalPath: ${self:custom.client.distributionFolder}/
+  s3LocalPath: dist/
   serverless-s3-cleaner:
     buckets:
       - ${self:custom.client.bucketName}
