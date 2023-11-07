@@ -1,4 +1,4 @@
-service: shop-react-redux-cloudfront2
+service: my-shop-react-redux-cloudfront
 
 frameworkVersion: "3"
 
@@ -19,7 +19,7 @@ plugins:
 
 custom:
   client:
-    bucketName: shop-react-redux-cloudfront2
+    bucketName: my-shop-react-redux-cloudfront
     distributionFolder: dist
   s3BucketName: ${self:custom.client.bucketName}
 
@@ -36,7 +36,8 @@ resources:
       Type: AWS::S3::Bucket
       Properties:
         BucketName: ${self:custom.s3BucketName}
-        AccessControl: PublicRead
+        PublicAccessBlockConfiguration:
+          BlockPublicAcls: false
         WebsiteConfiguration:
           IndexDocument: index.html
           ErrorDocument: index.html
