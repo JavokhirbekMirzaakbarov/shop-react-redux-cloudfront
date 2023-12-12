@@ -76,4 +76,4 @@ Remove an entire stack configured in `serverless.yml` via CloudFormation.
 
 ### Cloudfront URL
 
-[https://d39fyh14jydzgl.cloudfront.net/](https://d39fyh14jydzgl.cloudfront.net/)
+[https://dou5dv1ztovfd.cloudfront.net/](https://dou5dv1ztovfd.cloudfront.net/)
